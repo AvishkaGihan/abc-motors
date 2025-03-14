@@ -1,0 +1,30 @@
+{
+  "name": "abc-motors",
+  "version": "1.0.0",
+  "description": "This project is a web-based Financial & Distribution Solution for ABC Automotive Enterprises, built with MERN stack, Tailwind CSS, Redux, and Socket.io, managing transactions, distribution, inventory, and customer interactions.",
+  "main": "server/index.js",
+  "type": "module",
+  "scripts": {
+    "start": "node server/index.js",
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "server": "nodemon server/index.js",
+    "client": "cd client && npm run dev"
+  },
+  "keywords": [
+    "automotive",
+    "financial-solution",
+    "distribution-system"
+  ],
+  "author": "Avishka Gihan",
+  "license": "MIT",
+  "devDependencies": {
+    "concurrently": "^9.1.2",
+    "nodemon": "^3.1.9"
+  },
+  "dependencies": {
+    "@reduxjs/toolkit": "^2.6.1",
+    "lucide-react": "^0.481.0",
+    "react-redux": "^9.2.0",
+    "react-router": "^7.3.0"
+  }
+}
