@@ -1,6 +1,5 @@
 import { NavLink } from "react-router";
 import { ChevronRight } from "lucide-react";
-import React from "react";
 
 const SidebarItem = ({ page, isOpen }) => {
   return (

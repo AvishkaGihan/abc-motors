@@ -1,6 +1,3 @@
-import React from "react";
-import SidebarItem from "./SidebarItem";
-import UserProfile from "./UserProfile";
 import {
   Home,
   Menu,
@@ -12,12 +9,13 @@ import {
   BarChart2Icon,
   Settings2,
   LogOut,
-  ChevronRight,
 } from "lucide-react";
+import SidebarItem from "./SidebarItem";
+import UserProfile from "./UserProfile";
 
 const Sidebar = ({ isOpen, toggleSidebar }) => {
   const pages = [
-    { path: "/dashboard", title: "Dashboard", icon: <Home size={20} /> },
+    { path: "/", title: "Dashboard", icon: <Home size={20} /> },
     {
       path: "/master-data",
       title: "Master Data",
@@ -54,7 +52,7 @@ const Sidebar = ({ isOpen, toggleSidebar }) => {
     <div
       className={`${
         isOpen ? "w-80" : "w-20 items-center"
-      } transition-all duration-300 h-full flex flex-col bg-blue-600 text-white overflow-hidden md:w-80 sm:w-64`}
+      } transition-all duration-300 h-full flex flex-col bg-blue-600 text-white overflow-hidden`}
     >
       {/* Sidebar Header */}
       <div className="flex items-center justify-between p-6">
@@ -100,10 +98,7 @@ const Sidebar = ({ isOpen, toggleSidebar }) => {
       <div className="mt-auto border-t border-blue-500 px-3 py-2">
         <UserProfile isOpen={isOpen} />
         <button
-          onClick={() => {
-            console.log("Logging out...");
-            // Add logout logic here (e.g., clear tokens, redirect to login)
-          }}
+          onClick={() => console.log("Logging out...")}
           className="w-full flex items-center p-4 cursor-pointer transition-all duration-200 hover:bg-blue-500 hover:pl-6 rounded group"
           aria-label="Logout"
         >
@@ -112,12 +107,6 @@ const Sidebar = ({ isOpen, toggleSidebar }) => {
             className="transition-transform duration-200 group-hover:scale-110"
           />
           {isOpen && <span className="ml-3">Logout</span>}
-          {isOpen && (
-            <ChevronRight
-              size={20}
-              className="ml-auto transition-transform duration-200 group-hover:translate-x-1"
-            />
-          )}
         </button>
       </div>
     </div>
